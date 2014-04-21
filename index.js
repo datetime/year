@@ -8,16 +8,18 @@
 const replace = require('frep');
 
 module.exports = function(str) {
-  var year = new Date().getFullYear();
+  str = str || 'YYYY';
+
+  var year = new Date().getUTCFullYear();
   var replacements = [
     {
       pattern: /[Yy]{4}/,
-      replacement: year
+      replacement: String(year)
     },
     {
       pattern: /[Yy]{2}/,
-      replacement: year.toString().substr(2, 2)
+      replacement: String(year).substr(2, 2)
     }
-  ]
+  ];
   return replace.strWithArr(str, replacements);
 };

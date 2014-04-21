@@ -14,10 +14,12 @@ npm i year --save-dev
 
 ```js
 var year = require('year');
-console.log(year('yy'));
-//=> 14
+console.log(year());
+//=> 2014
 console.log(year('yyyy'));
 //=> 2014
+console.log(year('yy'));
+//=> 14
 ```
 
 ## Author
@@ -26,11 +28,6 @@ console.log(year('yyyy'));
 
 + [github/jonschlinkert](https://github.com/jonschlinkert)
 + [twitter/jonschlinkert](http://twitter.com/jonschlinkert)
-
-**Brian Woodward**
-
-+ [github/doowb](https://github.com/doowb)
-+ [twitter/doowb](http://twitter.com/jonschlinkert)
 
 ## License
 Copyright (c) 2014 Jon Schlinkert, contributors.  

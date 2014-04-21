@@ -27,7 +27,7 @@ describe('year()', function () {
   });
 
   describe('when YYYY passed', function () {
-    it('should return the 2-digit current year', function (done) {
+    it('should return the 4-digit current year', function (done) {
       var actual = year('YYYY');
       expect(actual).to.equal('2014');
       done();
@@ -35,7 +35,7 @@ describe('year()', function () {
   });
 
   describe('when yyyy passed', function () {
-    it('should return the 2-digit current year', function (done) {
+    it('should return the 4-digit current year', function (done) {
       var actual = year('yyyy');
       expect(actual).to.equal('2014');
       done();
