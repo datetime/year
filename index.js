@@ -5,21 +5,19 @@
  * Licensed under the MIT license.
  */
 
-const replace = require('frep');
+'use strict';
 
-module.exports = function(str) {
-  str = str || 'YYYY';
+module.exports = function(pattern) {
+  var year = new Date().getUTCFullYear().toString();
+  if (typeof pattern !== 'string') {
+    return year;
+  }
 
-  var year = new Date().getUTCFullYear();
-  var replacements = [
-    {
-      pattern: /[Yy]{4}/,
-      replacement: String(year)
-    },
-    {
-      pattern: /[Yy]{2}/,
-      replacement: String(year).substr(2, 2)
-    }
-  ];
-  return replace.strWithArr(str, replacements);
+  if (/[Yy]{4}/.test(pattern)) {
+    return year;
+  }
+
+  if (/[Yy]{2}/.test(pattern)) {
+    return year.substr(2, 2);
+  }
 };
