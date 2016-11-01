@@ -30,6 +30,6 @@
   "devDependencies": {
     "helper-year": "^0.1.0",
     "mocha": "*",
-    "should": "^4.3.0"
+    "should": "^11.1.1"
   }
 }
